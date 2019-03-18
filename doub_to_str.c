@@ -5,7 +5,7 @@ char * d_to_str(double num)
 	int i;
 	float f;
 	double dec;
-	char *str1, *str2;
+	char *str1, *str2, *result;
 
 
 	i = num;
@@ -15,6 +15,8 @@ char * d_to_str(double num)
 	i = (int)dec * 10000;
 	str2 = i_to_str(i, 10);
 
-	return (strncat(str1, ".", str2));
+	result = strcat_1(str1, ".");
+
+	return (strcat_1(result, str2));
 
 }

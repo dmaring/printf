@@ -35,6 +35,8 @@ char * i_to_str(int num, int base)
 		length++;
 	}
 
+	result = malloc(sizeof(char) * (length + 1));
+
 	while (num > 0)
 	{
 		rem = num % base;
@@ -52,8 +54,6 @@ char * i_to_str(int num, int base)
 		length++;
 	}
 	printf("length: %d\n", length);
-
-	result = malloc(sizeof(char) * (length + 1));
 
 	if (sign == -1)
 	{

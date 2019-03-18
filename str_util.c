@@ -21,11 +21,11 @@ int strlen_1(char *s)
  * @n: till n variables.
  * Return: 0 if success.
  */
-char * strncat_1(char *dest, char *src, int n)
+char * strcat_1(char *dest, char *src)
 {
-	int i, j;
+	int i;
 
-	for (i = strlen_1(dest), j = 0; j < n && src[j]; i++, j++)
+	for (i = strlen_1(dest); src[i]; i++)
 	{
 		dest[i] = src[i];
 	}

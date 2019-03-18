@@ -24,6 +24,10 @@ int va_print_c(va_list);
 int va_print_s(va_list);
 int (*get_form_func(const char *s))(va_list);
 int _printf(const char *format, ...);
+<<<<<<< HEAD
+=======
+
+>>>>>>> 151de331caff8da75736b194d229b5e280a01985
 int strlen_1(char *s);
 char * d_to_str(double num);
 char * i_to_str(int num, int base);

@@ -1,6 +1,6 @@
 #include "holberton.h"
 
-int d_to_str(double num)
+char *d_to_str(double num)
 {
 	int i;
 	double dec;
@@ -16,7 +16,6 @@ int d_to_str(double num)
 
 	result = strcat_1(str1, ".");
 
-	
-	return (print_string(strcat_1(result, str2)));
+	return(strcat_1(result, str2));
 
 }

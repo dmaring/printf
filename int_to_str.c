@@ -1,23 +1,15 @@
 #include "holberton.h"
 #include <stdio.h>
-
-int strlen_1(char *s)
-{
-	int i;
-
-	for (i = 0; s[i]; i++)
-		;
-	return (i);
-}
+#include <string.h>
 
 /**
  * i_to_str - converts integer to string.
  * @num: number to be converted.
  * Return: returns the string.
  */
-char * i_to_str(int num, int base)
+int i_to_str(int num, int base)
 {
-	int i = 0, j, rem = 0, rev = 0, length = 0, sign = 1, temp;
+	int i = 0, j, rem = 0, rev = 0, length = 0, sign = 1, temp = 0;
 	char *result;
 
 	if (num == 0)
@@ -25,7 +17,7 @@ char * i_to_str(int num, int base)
 		result = malloc(sizeof(char) * 2);
 		result[0] = '0';
 		result[1] = '\0';
-		return (result);
+		return (print_string(result));
 	}
 
 	if (num < 0)
@@ -68,5 +60,5 @@ char * i_to_str(int num, int base)
 		result[i] = result[j];
 		result[j] = temp;
 	}
-	return (result);
+	return (print_string(result));
 }

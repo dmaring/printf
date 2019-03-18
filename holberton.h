@@ -1,11 +1,27 @@
 #ifndef HOLBERTON_H
 #define HOLBERTON_H
 #include <stdio.h>
-#include <stdar.h>
+#include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * struct format - holds formats and corresponding function pointers
+ *
+ * @id: formmat identifier
+ * @f: format function
+ */
+typedef struct printer
+{
+	char *id;
+	int (*f)(va_list);
+} printer_t;
 
 
-
+int _putchar(char c);
+int _putstr(char *c);
+int va_print_c(va_list);
+int va_print_s(va_list);
+int (*get_form_func(const char *s))(va_list);
+int _printf(const char *format, ...);
 
 #endif /** HOLBERTON_H **/

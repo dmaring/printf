@@ -7,7 +7,7 @@
  * @num: number to be converted.
  * Return: returns the string.
  */
-int i_to_str(int num, int base)
+char *i_to_str(int num, int base)
 {
 	int i = 0, j, rem = 0, rev = 0, length = 0, sign = 1, temp = 0;
 	char *result;
@@ -17,7 +17,7 @@ int i_to_str(int num, int base)
 		result = malloc(sizeof(char) * 2);
 		result[0] = '0';
 		result[1] = '\0';
-		return (print_string(result));
+		return (result);
 	}
 
 	if (num < 0)
@@ -45,7 +45,6 @@ int i_to_str(int num, int base)
 
 		length++;
 	}
-	printf("length: %d\n", length);
 
 	if (sign == -1)
 	{
@@ -60,5 +59,5 @@ int i_to_str(int num, int base)
 		result[i] = result[j];
 		result[j] = temp;
 	}
-	return (print_string(result));
+	return (result);
 }

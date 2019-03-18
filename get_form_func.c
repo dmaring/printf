@@ -12,6 +12,9 @@ int (*get_form_func(const char *s))(va_list)
 	printer_t printers[] = {
 		{"c", va_print_c},
 		{"s", va_print_s},
+		{"i", va_print_i},
+		{"d", va_print_i},
+		{"f", va_print_d},
 		{NULL, NULL}
 	};
 

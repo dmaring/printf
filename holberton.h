@@ -24,14 +24,14 @@ int va_print_c(va_list);
 int va_print_s(va_list);
 int va_print_i(va_list);
 int va_print_d(va_list);
-int (*get_form_func(const char *s))(va_list);
+
 int _printf(const char *format, ...);
 int strlen_1(char *s);
 char *d_to_str(double num);
 char *i_to_str(int num, int base);
 int print_string(char *s);
 char * strcat_1(char *dest, char *src);
-
+int (*get_form_func(const char *s))(va_list);
 
 
 #endif /** HOLBERTON_H **/

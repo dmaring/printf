@@ -35,11 +35,10 @@ int _printf(const char *format, ...)
 			{
 				ptr(valist);
 				i++;
-				break;
 			}
 			else
 			{
-				_putstr("Error\n");
+				print_string("Error\n");
 				break;
 			}
 		}

@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * d_to_str - converts decimal to string.
+ * @num: decimal number to be converted.
+ * Return: string concat of str1, ".", str2.
+ */
 char * d_to_str(double num)
 {
 	int i;

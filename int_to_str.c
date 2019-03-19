@@ -32,7 +32,9 @@ char *i_to_str(int num, int base)
 	result = malloc(sizeof(char) * (length + 1));
 	if (!result)
 		return (NULL);
+
 	while (digit > 0)
+
 	{
 		rem = digit % base;
 		digit = digit / base;

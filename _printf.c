@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 	va_list valist;
 
 	va_start(valist, format);
-
 	if ((!format || format[0] == '%') && (!format[1]))
 		return (-1);
 
@@ -29,7 +28,6 @@ int _printf(const char *format, ...)
 				i++;
 				continue;
 			}
-
 			ptr = get_form_func(&format[i]);
 
 			if (ptr) /** check if pointer not NULL **/
@@ -48,7 +46,6 @@ int _printf(const char *format, ...)
 			counter += _putchar(format[i]);
 		}
 		i++;
-
 	}
 	return (counter);
 }

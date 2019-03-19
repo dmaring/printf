@@ -34,6 +34,7 @@ char *i_to_str(int num, int base);
 int print_string(char *s);
 char *strcat_1(char *dest, char *src);
 int (*get_form_func(const char *s))(va_list);
+void tusBasicTester(void);
 
 
 #endif /** HOLBERTON_H **/

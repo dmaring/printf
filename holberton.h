@@ -6,8 +6,8 @@
 #include <stdlib.h>
 
 /**
+ * struct printer - contains format(id) and list.
  * struct format - holds formats and corresponding function pointers
- *
  * @id: formmat identifier
  * @f: format function
  */
@@ -30,7 +30,7 @@ int strlen_1(char *s);
 char *d_to_str(double num);
 char *i_to_str(int num, int base);
 int print_string(char *s);
-char * strcat_1(char *dest, char *src);
+char *strcat_1(char *dest, char *src);
 int (*get_form_func(const char *s))(va_list);
 
 

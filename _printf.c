@@ -14,24 +14,21 @@ int _printf(const char *format, ...)
 	va_list valist;
 
 	va_start(valist, format);
-
 	i = 0;
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
-			/** check for %% case **/
-			if (format[i + 1] == '%')
+			if (format[i + 1] == '%') /** check for %% case **/
 			{
 				_putchar('%');
-				i+=2;
+				i += 2;
 				break;
 			}
 			i++;
 			ptr = get_form_func(&format[i]);
 			i++;
-			/** check if pointer not NULL **/
-			if (ptr)
+			if (ptr) /** check if pointer not NULL **/
 			{
 				ptr(valist);
 			}
@@ -41,7 +38,6 @@ int _printf(const char *format, ...)
 				break;
 			}
 		}
-
 		/** print character if not a format id **/
 		else
 		{

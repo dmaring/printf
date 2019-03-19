@@ -5,7 +5,7 @@
  * @num: decimal number to be converted.
  * Return: string concat of str1, ".", str2.
  */
-char * d_to_str(double num)
+char *d_to_str(double num)
 {
 	int i;
 	double dec;
@@ -21,6 +21,6 @@ char * d_to_str(double num)
 
 	result = strcat_1(str1, ".");
 
-	return(strcat_1(result, str2));
+	return (strcat_1(result, str2));
 
 }

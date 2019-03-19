@@ -21,7 +21,7 @@ is NULL or if the functions encounters any errors, it returns -1.
 .sp
 .B Format of the format string
 .sp
-The format string can contain any characters, just like a regular string, in double quotes, which will be printed as is. 
+The format string can contain any characters, just like a regular string, in double quotes, which will be printed as is.
 However, this format string can contain
 .I conversion specifiers.
 These start with %, and are followed with a character depending on the data type
@@ -30,7 +30,7 @@ These start with %, and are followed with a character depending on the data type
 - Both are arguments.they specify type of arguments to be printed(int or double).
 .sp
 .B c
-- Prints a  single character. 
+- Prints a  single character.
 .sp
 .B s
 - Prints string.

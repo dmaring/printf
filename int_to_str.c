@@ -5,6 +5,7 @@
 /**
  * i_to_str - converts integer to string.
  * @num: number to be converted.
+ * @base: base binary, hexadecimal.
  * Return: returns the string.
  */
 char *i_to_str(int num, int base)
@@ -19,40 +20,33 @@ char *i_to_str(int num, int base)
 		result[1] = '\0';
 		return (result);
 	}
-
 	if (num < 0)
 	{
 		sign = -1;
 		num = -num;
 		length++;
 	}
-
 	result = malloc(sizeof(char) * (length + 1));
-
 	while (num > 0)
 	{
 		rem = num % base;
 		num = num / base;
 		rev = rev * base + rem;
 		if (rem > 9 && rem < 16)
-                {
-                        result[i++] = rem - 10 + 'A';
-                }
-                else
-                {
-                        result[i++] = rem + '0';
-                }
-
+		{
+			result[i++] = rem - 10 + 'A';
+		}
+		else
+		{
+			result[i++] = rem + '0';
+		}
 		length++;
 	}
-
 	if (sign == -1)
 	{
 		result[i++] = '-';
 	}
-
 	result[i] = '\0';
-
 	for (i = 0, j = strlen_1(result) - 1; i < j; i++, j--)
 	{
 		temp = result[i];

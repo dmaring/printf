@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _putstr: function that prints string to stdout
+ * _putstr - function that prints string to stdout
  * @s: input string as char pointer
  *
  * Return: integer number of characters printed

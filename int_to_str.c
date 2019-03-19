@@ -28,9 +28,7 @@ char *i_to_str(int num, int base)
 	}
 	result = malloc(sizeof(char) * (length + 1));
 	if (!result)
-	{
 		return (NULL);
-	}
 	while (num > 0)
 	{
 		rem = num % base;

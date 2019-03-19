@@ -8,8 +8,8 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0;
-	unsigned int counter = 0;
+	int i = 0;
+	int counter = 0;
 	int (*ptr)(va_list);
 	va_list valist;
 
@@ -19,29 +19,24 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			if (format[i + 1] == '%') /** check for %% case **/
+			i++;
+			if (format[i] == '%') /** check for %% case **/
 			{
-				_putchar('%');
-				i += 1;
-				break;
+				counter += _putchar('%');
+				i++;
+				continue;
 			}
-			i++;
+			
 			ptr = get_form_func(&format[i]);
-			i++;
 			if (ptr) /** check if pointer not NULL **/
 				counter += ptr(valist);
-			else
-			{
-				counter += print_string("Error\n");
-				break;
-			}
 		}
 		/** print character if not a format id **/
 		else
 		{
 			counter += _putchar(format[i]);
-			i++;
 		}
+		i++;
 
 	}
 	return (counter);

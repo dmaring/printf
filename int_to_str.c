@@ -10,7 +10,7 @@
  */
 char *i_to_str(int num, int base)
 {
-	int i = 0, j, rem = 0, rev = 0, length = 0, sign = 1, temp = 0;
+	int i = 0, rem = 0, rev = 0, length = 0, sign = 1;
 	char *result;
 	unsigned int digit;
 

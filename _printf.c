@@ -14,12 +14,12 @@ int _printf(const char *format, ...)
 	va_list valist;
 
 	va_start(valist, format);
-	if (!format || (format[0] == '%' && format[1] == '\0'))
-		return (-1);
        	while (format && format[i])
 	{
 		if (format[i] == '%')
 		{
+			if (!format && format[1] == '\0')
+				return (-1);
 			i++;
 			if (format[i] == '%') /** check for %% case **/
 			{

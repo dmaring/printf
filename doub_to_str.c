@@ -17,7 +17,10 @@ char *d_to_str(double num)
 	dec = num - (int)num;
 
 	i = dec * 1000000;
+	while(i % 10 == 0)
+		i = i/10;
 	str2 = i_to_str(i, 10);
+
 
 	result = strcat_1(str1, ".");
 

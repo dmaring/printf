@@ -14,6 +14,7 @@ char *d_to_str(double num)
 
 	i = (int)num;
 	str1 = i_to_str((int)num, 10);
+
 	if (num > 0)
 	{
 		dec = num - (int)num;
@@ -25,10 +26,11 @@ char *d_to_str(double num)
 
 	i = dec * 1000000;
 	j = dec * 10000000;
+
 	if (j % 10 >= 5)
 		i += 1;
 
-	if (i == 0)
+	if (i == 0) /** check for case when num is whole num **/
 		str2 = "000000";
 	else
 		str2 = i_to_str(i, 10);

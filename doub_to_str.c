@@ -7,7 +7,7 @@
  */
 char *d_to_str(double num)
 {
-	int i;
+	int i, j;
 	double dec;
 	char *str1, *str2, *result;
 
@@ -24,9 +24,14 @@ char *d_to_str(double num)
 	}
 
 	i = dec * 1000000;
-	while(i > 0 && i % 10 == 0)
-		i = i/10;
-	str2 = i_to_str(i, 10);
+	j = dec * 10000000;
+	if (j % 10 >= 5)
+		i += 1;
+
+	if (i == 0)
+		str2 = "000000";
+	else
+		str2 = i_to_str(i, 10);
 
 
 	result = strcat_1(str1, ".");

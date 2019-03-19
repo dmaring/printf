@@ -10,6 +10,7 @@
 int main(void)
 {
     _printf("Character: %c\n", 'c');
+    _printf("Character: %i\n", -2147483648);
 
     return (0);
 }

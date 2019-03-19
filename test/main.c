@@ -16,19 +16,16 @@ int main(void)
 	void *addr;
 
 
-	len = _printf("Let's try to printf a simple sentence.\n");
-	len2 = printf("Let's try to printf a simple sentence.\n");
 
-	_printf("Let's try to printf a simple sentence.\n");
-	_printf("string:%s character:%c", "This is a string", 'd');
+	_printf("string: %s %s", "This is string 1\n", " and this is string 2\n");
 	_putchar('\n');
-	_printf("%c\n", c);
+	_printf("%c", c);
 	_putchar('\n');
 
 
 	ui = (unsigned int)INT_MAX + 1024;
 	addr = (void *)0x7ffe637541f0;
-	_printf("Length:[%f, %d]\n", 40.23, 233);
+	_printf("Length:[%f, %i]\n", 40.23, 233);
 
 	return (0);
 }

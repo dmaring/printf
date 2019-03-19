@@ -15,7 +15,7 @@ int strlen_1(char *s)
 }
 
 /**
- * *_strncat - contancate(add) strings.
+ * *_strcat - contancate(add) strings.
  * @dest: destination where src is copied into.
  * @src: source file.
  * @n: till n variables.
@@ -24,10 +24,11 @@ int strlen_1(char *s)
 char * strcat_1(char *dest, char *src)
 {
 	int i;
+	int j = 0;
 
-	for (i = strlen_1(dest); src[i]; i++)
+	for (i = strlen_1(dest); src[j]; i++, j++)
 	{
-		dest[i] = src[i];
+		dest[i] = src[j];
 	}
 	return (dest);
 }

@@ -23,7 +23,7 @@ int (*get_form_func(const char *s))(va_list)
 	/** loop through fmatters id member **/
 	while (printers[i].id)
 	{
-		if (s && *s == *(printers[i].id) && !s[i])
+		if (*s == *(printers[i].id))
 			break;
 		i++;
 	}

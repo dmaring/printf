@@ -9,6 +9,8 @@ int main()
 	printf("%s\n", s);
 	s = i_to_str(-2356, 10);
 	printf("%s\n", s);
+	s = i_to_str(540, 10);
+	printf("%s\n", s);
 	s = i_to_str(0, 10);
 	printf("%s\n", s);
 	s = i_to_str(1356, 16);

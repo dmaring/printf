@@ -15,23 +15,21 @@ int _printf(const char *format, ...)
 
 	va_start(valist, format);
 	i = 0;
-	while (format[i])
+	while (format && format[i])
 	{
 		if (format[i] == '%')
 		{
 			if (format[i + 1] == '%') /** check for %% case **/
 			{
 				_putchar('%');
-				i += 2;
+				i += 1;
 				break;
 			}
 			i++;
 			ptr = get_form_func(&format[i]);
 			i++;
 			if (ptr) /** check if pointer not NULL **/
-			{
 				counter += ptr(valist);
-			}
 			else
 			{
 				counter += print_string("Error\n");

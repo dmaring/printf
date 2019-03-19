@@ -8,8 +8,10 @@
  */
 int va_print_d(va_list valist)
 {
-	char *s;
+	int counter = 0;
+	char *s = (va_arg(valist, double));
 
-	s = d_to_str(va_arg(valist, double));
-	return (print_string(s));
+	counter = (print_string(s));
+	free(s);
+	return (counter);
 }

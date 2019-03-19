@@ -8,7 +8,5 @@
  */
 int va_print_s(va_list valist)
 {
-	char *s = (va_arg(valist, char*));
-
-	return (print_string(s));
+	return(i_to_str((va_arg(valist, char*));
 }

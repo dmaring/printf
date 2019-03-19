@@ -33,21 +33,15 @@ char *i_to_str(int num, int base)
 		num = num / base;
 		rev = rev * base + rem;
 		if (rem > 9 && rem < 16)
-		{
 			result[i++] = rem - 10 + 'A';
-		}
 		else
-		{
 			result[i++] = rem + '0';
-		}
 		length++;
 	}
 	if (sign == -1)
-	{
 		result[i++] = '-';
-	}
 	result[i] = '\0';
-	for (i = 0, j = strlen_1(result) - 1; i < j; i++, j--)
+	for (i = 0, j = length - 1; i < j; i++, j--)
 	{
 		temp = result[i];
 		result[i] = result[j];

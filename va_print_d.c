@@ -9,7 +9,7 @@
 int va_print_d(va_list valist)
 {
 	int counter = 0;
-	char *s = (va_arg(valist, double));
+	char *s = d_to_str((va_arg(valist, double)));
 
 	counter = (print_string(s));
 	free(s);

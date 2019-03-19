@@ -9,9 +9,11 @@
 int va_print_i(va_list valist)
 {
          int counter = 0;
-         char *s = (va_arg(valist, int));
+         char *s;
 
-	 counter = (print_string(s));
+	 s = i_to_str(va_arg(valist, int), 10);
+
+	 counter += (print_string(s));
 	 free(s);
 	 return(counter);
 }

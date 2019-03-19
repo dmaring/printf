@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 			else
 			{
 				counter += print_string("%");
-				counter += print_string(format[i]);
+				counter += (_putchar(format[i]));
 			}
 		}
 		/** print character if not a format id **/

@@ -46,11 +46,6 @@ char *i_to_str(int num, int base)
 	if (sign == -1)
 		result[i++] = '-';
 	result[i] = '\0';
-	for (i = 0, j = length - 1; i < j; i++, j--)
-	{
-		temp = result[i];
-		result[i] = result[j];
-		result[j] = temp;
-	}
+	reverse_str(result, length);
 	return (result);
 }

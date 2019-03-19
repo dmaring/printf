@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 	va_list valist;
 
 	va_start(valist, format);
-
 	if ((!format || format[0] == '%') && (!format[1]))
 		return (-1);
 	while (format && format[i])
@@ -45,7 +44,6 @@ int _printf(const char *format, ...)
 			counter += _putchar(format[i]);
 		}
 		i++;
-
 	}
 	return (counter);
 }

@@ -10,8 +10,9 @@
  */
 char *i_to_str(int num, int base)
 {
-	int i = 0, j, rem = 0, rev = 0, length = 0, sign = 1, temp = 0;
+	int i = 0, rem = 0, rev = 0, length = 0, sign = 1;
 	char *result;
+	unsigned int digit;
 
 	if (num == 0)
 	{
@@ -23,16 +24,20 @@ char *i_to_str(int num, int base)
 	if (num < 0)
 	{
 		sign = -1;
-		num = -num;
+		digit = -num;
 		length++;
 	}
+	else
+		digit = num;
 	result = malloc(sizeof(char) * (length + 1));
 	if (!result)
 		return (NULL);
-	while (num > 0)
+
+	while (digit > 0)
+
 	{
-		rem = num % base;
-		num = num / base;
+		rem = digit % base;
+		digit = digit / base;
 		rev = rev * base + rem;
 		if (rem > 9 && rem < 16)
 			result[i++] = rem - 10 + 'A';
@@ -43,11 +48,6 @@ char *i_to_str(int num, int base)
 	if (sign == -1)
 		result[i++] = '-';
 	result[i] = '\0';
-	for (i = 0, j = length - 1; i < j; i++, j--)
-	{
-		temp = result[i];
-		result[i] = result[j];
-		result[j] = temp;
-	}
+	reverse_str(result, length);
 	return (result);
 }

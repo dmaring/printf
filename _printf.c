@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	unsigned int i = 0;
-	unsigned int count = 0;
+	unsigned int counter = 0;
 	int (*ptr)(va_list);
 	va_list valist;
 
@@ -33,11 +33,11 @@ int _printf(const char *format, ...)
 			/** check if pointer not NULL **/
 			if (ptr)
 			{
-				ptr(valist);
+				counter += ptr(valist);
 			}
 			else
 			{
-				print_string("Error\n");
+				counter += print_string("Error\n");
 				break;
 			}
 		}
@@ -45,10 +45,10 @@ int _printf(const char *format, ...)
 		/** print character if not a format id **/
 		else
 		{
-			_putchar(format[i]);
+			counter += _putchar(format[i]);
 			i++;
 		}
 
 	}
-	return (count);
+	return (counter);
 }

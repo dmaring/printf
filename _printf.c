@@ -20,29 +20,29 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
+			if (format[i + 1] == '\0')
+				return (-1);
 			i++;
 			if (format[i] == '%') /** check for %% case **/
 			{
-				counter += _putchar('%');
-				i++;
-				continue;
+				if (format[i + 1] != '\0')
+				{
+					counter += _putchar('%');
+					i++;
+					continue;
+				}
 			}
 			ptr = get_form_func(&format[i]);
-
 			if (ptr) /** check if pointer not NULL **/
 				counter += ptr(valist);
-
 			else
 			{
 				counter += print_string("%");
 				counter += (_putchar(format[i]));
 			}
 		}
-		/** print character if not a format id **/
 		else
-		{
 			counter += _putchar(format[i]);
-		}
 		i++;
 	}
 	return (counter);

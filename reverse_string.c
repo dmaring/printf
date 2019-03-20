@@ -6,7 +6,6 @@
  * @length: length of string
  *
  * Return: void
- *
  */
 void reverse_str(char *str, int length)
 {

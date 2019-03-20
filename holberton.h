@@ -18,6 +18,7 @@ typedef struct printer
 	int (*f)(va_list);
 } printer_t;
 
+
 int _putchar(char c);
 int _putstr(char *c);
 int va_print_c(va_list);
@@ -26,6 +27,7 @@ int va_print_i(va_list);
 int va_print_d(va_list);
 int va_print_b(va_list);
 void reverse_str(char *str, int length);
+
 int _printf(const char *format, ...);
 int strlen_1(char *s);
 char *d_to_str(double num);
@@ -34,5 +36,6 @@ int print_string(char *s);
 char *strcat_1(char *dest, char *src);
 int (*get_form_func(const char *s))(va_list);
 void tusBasicTester(void);
+
 
 #endif /** HOLBERTON_H **/

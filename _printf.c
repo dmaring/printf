@@ -26,12 +26,9 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '%') /** check for %% case **/
 			{
-				if (format[i + 1] != '\0')
-				{
-					counter += _putchar('%');
-					i++;
-					continue;
-				}
+				counter += _putchar('%');
+				i++;
+				continue;
 			}
 			ptr = get_form_func(&format[i]);
 			if (ptr) /** check if pointer not NULL **/

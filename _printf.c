@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 					continue;
 				}
 			}
-			ptr = get_form_func(format[i]);
+			ptr = get_form_func(&format[i]);
 			if (ptr) /** check if pointer not NULL **/
 				counter += ptr(valist);
 			else

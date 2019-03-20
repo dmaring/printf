@@ -25,6 +25,7 @@ int va_print_c(va_list);
 int va_print_s(va_list);
 int va_print_i(va_list);
 int va_print_d(va_list);
+int va_print_b(va_list);
 void reverse_str(char *str, int length);
 
 int _printf(const char *format, ...);

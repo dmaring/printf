@@ -13,7 +13,7 @@ int print_string(char *s)
 	if (s == NULL)
 		s = "(null)";
 
-	while (s && s[i])
+	while (s[i])
 	{
 		write(1, &s[i], 1);
 		i++;

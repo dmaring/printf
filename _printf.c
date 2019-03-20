@@ -46,5 +46,6 @@ int _printf(const char *format, ...)
 			counter += _putchar(format[i]);
 		i++;
 	}
+	va_end(valist);
 	return (counter);
 }

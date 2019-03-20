@@ -16,6 +16,7 @@ int (*get_form_func(const char *s))(va_list)
 		{"d", va_print_i},
 		{"f", va_print_d},
 		{"b", va_print_b},
+		{"R", va_print_rot13},
 		{NULL, NULL}
 	};
 
